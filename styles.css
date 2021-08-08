@@ -2,13 +2,38 @@ body {
     background-color: gray;
 }
 
+header {
+    color: rgb(37, 35, 35);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 1%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    display :flex;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#clearButton {
+    width: 50%;
+}
+
 #grid {
     height: 500px;
     width: 500px;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    margin: 2% auto;
+    margin-left: auto;
     background-color: white;
     box-shadow: 5px 5px 5px rgb(43, 42, 42);
 }
@@ -17,3 +42,15 @@ body {
     border: 1px dotted gray;
 }
 
+@media only screen and (max-width: 425px) {
+    #grid {
+        height: 250px;
+        width: 250px;
+    }
+    body {
+        background-color: red;
+    }
+    #clearButton {
+        width: 70%;
+    }
+}
