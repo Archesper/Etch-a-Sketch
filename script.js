@@ -15,7 +15,7 @@ function newGrid() {
     let newGridSize = window.prompt("Enter new grid size: (Max 100)");
     console.log(newGridSize);
     while (isNaN(newGridSize) || parseInt(newGridSize) > 100) {
-        newGridSize = window.prompt("Please input a number lower than or equal to:");
+        newGridSize = window.prompt("Please input a number lower than or equal to 100:");
     }
     if (newGridSize === null) {return;}
     fillGrid(parseInt(newGridSize));
