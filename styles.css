@@ -1,0 +1,19 @@
+body {
+    background-color: gray;
+}
+
+#grid {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    margin: 2% auto;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(43, 42, 42);
+}
+
+#grid div {
+    border: 1px dotted gray;
+}
+
