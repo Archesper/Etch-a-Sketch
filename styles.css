@@ -36,7 +36,7 @@ main {
     cursor: pointer;
     outline: none;
 }
-#settings button:hover {
+#settings button:hover, .active {
     color: white;
     background-color: rgb(49, 48, 48);
 }

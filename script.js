@@ -4,11 +4,19 @@ fillGrid(16);
 const clearButton = document.getElementById("clearButton");
 clearButton.addEventListener('click', newGrid)
 
+const eraserButton = document.getElementById("eraserButton");
+eraserButton.addEventListener('click', eraserMode)
+
 function colorSwitch(e) {
-    const red = Math.floor(Math.random()*255);
-    const green = Math.floor(Math.random()*255);
-    const blue = Math.floor(Math.random()*255);
-    e.target.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`;
+    if (eraserButton.classList.contains('active')) {
+        e.target.style.backgroundColor = "#ffffff";
+    }
+    else {
+        const red = Math.floor(Math.random()*255);
+        const green = Math.floor(Math.random()*255);
+        const blue = Math.floor(Math.random()*255);
+        e.target.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`;
+    }
 }
 
 function newGrid() {
@@ -30,4 +38,8 @@ function fillGrid(size) {
     }
     const gridCells = document.querySelectorAll("#grid>div");
     gridCells.forEach(cell => cell.addEventListener('mouseover', colorSwitch));
+}
+
+function eraserMode() {
+    eraserButton.classList.toggle('active');
 }
